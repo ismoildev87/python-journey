@@ -1,14 +1,41 @@
-# Python o`rganish yo`lim
-## Men haqimda. Men Ismoiljonman. Dasturlashni kelajakda yaxshi mutaxassis bo`lish uchun va ish faoliyatimda foydalanish uchun o`rganyapman.
-## Bu repozitoriyda dastlabki o`rgangan darslarimdan namunalar bor
+# Python urganish yulim
+
+## Men haqimda.
+
+Men Ismoiljonman. Dasturlashni kelajakda yaxshi mutaxassis bulish uchun va ish faoliyatimda foydalanish uchun urganyapman.
+
+## Bu repozitoriyda dastlabki urgangan darslarimdan namunalar bor
+
 ## Loyihalar
-### 1.Tanishuv boti (greeting_bot.py) Tanishuv botida bot ismni, familiya, yoshi, shahrini va oylik maoshni so`raydi. Yillik ish haqi,yashagan kunlarni va 10 yildan keyin yoshi qancha bo`lishini aytib beradi.
-**Ishlatgan bilimlarim:** Bunda print, int, str, float, type, input kabi dastlabki kunikmalarni urgandim va amaliyotda ishlatib kurdim.
+
+### 1.Tanishuv boti (greeting_bot.py) 
+
+Tanishuv botida bot ismni, familiya, yoshi, shahrini va oylik maoshni suraydi. Yillik ish haqi,yashagan kunlarni va 10 yildan keyin yoshi qancha bulishini aytib beradi.
+
+**Ishlatgan bilimlarim:** 
+
+- Uzgaruvchilar (variables) va nomlash qoidalari
+- Malumot turlari: `str`, `int`, `float`
+- Tur uzgartirish: `int()`, `float()`
+- Foydalanuvchidan malumot olish: `input()`
+- Matematik amallar va matn birlashtirish
+
 **Ishga tushirish:**
-python greeting_bot.py
+
+```python greeting_bot.py```
+
 ## Mashqlar
-[hello.py, variables.py, types_practice.py, data_types.py, calculator.py, abut_me.py, input_practice.py, greeting_bot.py larda ishlab kurdim]
+
+-hello.py-salom dunyo birirnchi kod
+-variables.py-uzgaruvchilar bilan tanishuv
+-types_practice.py- malumot turlar haqida mashq
+-data_types.py-ma`lumot turlari
+-calculator.py-hisoblash haqida mashq
+-about_me.py-uzim haqida qisqacha
+-input_practice.py-foydalanuvchidan malumot olish
+-greeting_bot.py salomlashish boti
 
 ## Aloqa
-- GitHub: [github.com/ismoildev87/python-journey]
-- Email: [toshboyeb87i@gmail.com]
+
+- GitHub: github.com/ismoildev87/python-journey
+- Email: toshboyev87i@gmail.com
