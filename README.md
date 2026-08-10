@@ -39,3 +39,20 @@ Tanishuv botida bot ismni, familiya, yoshi, shahrini va oylik maoshni suraydi. Y
 
 - GitHub: github.com/ismoildev87/python-journey
 - Email: toshboyev87i@gmail.com
+### 2. Savol-javob o'yini (quiz_game.py)
+
+Python asoslari bo'yicha 5 savoldan iborat test. Javoblarni tekshiradi, 
+ball to'playdi va natijaga qarab baho beradi.
+
+**Ishlatgan bilimlarim:**
+
+- Shartli operatorlar: `if`, `elif`, `else`
+- Mantiqiy operatorlar: `or`
+- Taqqoslash operatorlari: `==`, `>=`
+- Hisoblagich (counter) bilan ishlash
+- Foiz hisoblash
+
+**Ishga tushirish:**
+```
+python quiz_game.py
+```
