@@ -1,56 +1,28 @@
 #---"O`rganilganlarni savol javob orqali takrorlash"---
-ism = input("Ismingizni kiriting: ")
-print("Salom",ism, "sizga beshta savollar beriladi, javoblarga qarab ball beriladi")
-print("Savollarni boshlaymiz unda")
+savollar = [
+    "input() qanday turdagi qiymat qaytaradi?",
+     "pythondagi kasr sonli o`zgaruvchilarni ko`rsating",
+     "Matnni songa aylantiruvchi funksiya nomi?",
+     "Sonni matnga aylantiruvchi funksiya nomi?",
+     "100/24 natijasi qanday turda buladi?",
+     "print(True and False)da nima chiqadi?",
+      "b*3 nima chiqadi?"
+      ]
+javoblar = ["str", "float", "int", "str", "float", "True", "bbb"]
 ball = 0
-#1-savol
-print("1-Savol: input() qanday turdagi qiymat qaytaradi?")
-javob = input("javobingiz: ")
-if javob == "str" or javob == "STR" or javob == "Str":
-    print("tugri")
-    ball = ball+1
-else:
-    print("notugri. tugri javob: str")
-print()
-#2-savol
-print("2-Savol: pythondagi kasr sonli o`zgaruvchilarni ko`rsating")
-javob = input("javobingiz: ")
-if javob == "float" or javob == "FLOAT" or javob == "Float":
-    print("tugri")
-    ball = ball+1
-else:
-    print("notugri. tugri javob: float")
-print()
-#3-savol
-print("3-Savol: Matnni songa aylantiruvchi funksiya nomi?")
-javob = input("javobingiz: ")
-if javob == "int" or javob == "INT" or javob == "Int":
-    print("tugri")
-    ball = ball+1
-else:
-    print("notugri. tugri javob: int")
-print()
-#4-savol
-print("4-Savol: Sonni matnga aylantiruvchi funksiya nomi?")
-javob = input("javobingiz: ")
-if javob == "str" or javob == "STR" or javob == "Str":
-    print("tugri")
-    ball = ball+1
-else:
-    print("notugri. tugri javob: str")
-print()
-#5-savol
-print("5-Savol: 100/24 natijasi qanday turda buladi?")
-javob = input("javobingiz: ")
-if javob == "float" or javob == "FLOAT" or javob == "Float":
-    print("tugri")
-    ball = ball+1
-else:
-    print("notugri. tugri javob: float")
-print()
-print("Sizning tuplagan ballingiz:",ball)
-foiz = ball/5*100
-print("Sizning natijangiz:", ball, "/ 5")
+ism = input("Ismingizni kiriting: ")
+print("Salom",ism, "-sizga", len(savollar),"ta savol beriladi, javoblarga qarab ball beriladi")
+print("Savollarni boshlaymiz unda")
+for i in range(len(savollar)):
+    print(i+1, "-savol:", savollar[i])
+    javob = input("Javobingiz: ")
+    if javob == javoblar[i]:
+        print("tugri")
+        ball = ball+1
+    else:
+        print("notugri, tugri javob:", javoblar[i]) 
+foiz = ball / len(savollar) * 100
+print("Sizning natijangiz:", ball, "/",len(savollar))
 print("Foiz:", foiz, "%")
 if foiz>=100:
     print("Zo'r! Siz mutaxassissiz!")
