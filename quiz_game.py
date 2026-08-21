@@ -1,26 +1,27 @@
 #---"O`rganilganlarni savol javob orqali takrorlash"---
-savollar = [
-    "input() qanday turdagi qiymat qaytaradi?",
-     "pythondagi kasr sonli o`zgaruvchilarni ko`rsating",
-     "Matnni songa aylantiruvchi funksiya nomi?",
-     "Sonni matnga aylantiruvchi funksiya nomi?",
-     "100/24 natijasi qanday turda buladi?",
-     "print(True and False)da nima chiqadi?",
-      "b*3 nima chiqadi?"
-      ]
-javoblar = ["str", "float", "int", "str", "float", "True", "bbb"]
+savollar = {
+    "input() qanday turdagi qiymat qaytaradi?": "str",
+     "pythondagi kasr sonli o`zgaruvchilarni ko`rsating": "float",
+     "Matnni songa aylantiruvchi funksiya nomi?": "int",
+     "Sonni matnga aylantiruvchi funksiya nomi?": "str",
+     "100/24 natijasi qanday turda buladi?": "float",
+     "print(True and False)da nima chiqadi?": "True",
+     "b*3 nima chiqadi?": "bbb"
+}
 ball = 0
 ism = input("Ismingizni kiriting: ")
 print("Salom",ism, "-sizga", len(savollar),"ta savol beriladi, javoblarga qarab ball beriladi")
 print("Savollarni boshlaymiz unda")
-for i in range(len(savollar)):
-    print(i+1, "-savol:", savollar[i])
+raqam = 0
+for savol, tugri_javob in savollar.items():
+    raqam = raqam+1
+    print(raqam, "-savol: ", savol)
     javob = input("Javobingiz: ")
-    if javob == javoblar[i]:
+    if javob == tugri_javob:
         print("tugri")
         ball = ball+1
     else:
-        print("notugri, tugri javob:", javoblar[i]) 
+        print("notugri, tugri javob:", tugri_javob) 
 foiz = ball / len(savollar) * 100
 print("Sizning natijangiz:", ball, "/",len(savollar))
 print("Foiz:", foiz, "%")
