@@ -56,3 +56,20 @@ ball to'playdi va natijaga qarab baho beradi.
 ```
 python quiz_game.py
 ```
+### 3. Talabalar baholash tizimi (student_manager.py)
+
+Talabalarni qo'shish, ularga ball qo'yish, o'rtacha ballarni hisoblash 
+va eng yaxshi natijani aniqlash imkonini beruvchi konsol dasturi.
+
+**Ishlatgan bilimlarim:**
+
+- Funksiyalar (`def`), parametrlar, `return`
+- Lug'atlar va lug'atlar ro'yxati
+- `while True` + menyu tsikli
+- Ro'yxatni funksiyaga uzatish va ichida o'zgartirish
+- Filtrlash naqshi (eng yaxshi natijani topish)
+
+**Ishga tushirish:**
+```
+python student_manager.py
+```
