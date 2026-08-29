@@ -73,3 +73,11 @@ va eng yaxshi natijani aniqlash imkonini beruvchi konsol dasturi.
 ```
 python student_manager.py
 ```
+**Yangilanish:** Endi ma'lumotlar fayl (talabalar.txt) ga saqlanadi. 
+Dastur yopilib qayta ochilganda, barcha talabalar va ballar saqlanib qoladi.
+
+**Qo'shilgan bilimlar:**
+- Fayl bilan ishlash: open(), with, "r"/"w" rejimlari
+- Matnni bo'laklarga ajratish: split()
+- try/except bilan xatolardan himoya
+- Takroriy ma'lumotni oldini olish (bool bayroq)
