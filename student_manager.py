@@ -7,6 +7,37 @@ def menyu_korsat():
     print("5. Chiqish")
 
 
+def saqlash(talabalar):
+    with open("talabalar.txt", "w") as fayl:
+        for talaba in talabalar:
+            ballar_matn = ""
+            for ball in talaba["ball"]:
+                ballar_matn = ballar_matn + str(ball) + ","
+            qator = talaba["ism"] + "|" + ballar_matn + "\n"
+            fayl.write(qator)
+
+
+def yuklash():
+    talabalar = []
+    try:
+        with open("talabalar.txt", "r") as fayl:
+            for qator in fayl:
+                qismlar = qator.strip().split("|")
+                ism = qismlar[0]
+                ballar_matn = qismlar[1]
+
+                ballar_royxat = ballar_matn.split(",")
+                ballar = []
+                for ball_matn in ballar_royxat:
+                    if ball_matn != "":
+                        ballar.append(int(ball_matn))
+
+                talabalar.append({"ism": ism, "ball": ballar})
+    except FileNotFoundError:
+        pass
+    return talabalar
+
+
 def ball_qoshish(talabalar):
     ism = input("Kimga ball qo'yasiz: ")
     for talaba in talabalar:
@@ -30,7 +61,7 @@ def royxatni_korsat(talabalar):
 def ortacha_hisobla(ballar):
     if len(ballar) == 0:
         return 0
-    return sum(ballar) / len(ballar)
+    return round(sum(ballar) / len(ballar), 2)
 
 
 def statistika_korsat(talabalar):
@@ -50,15 +81,24 @@ def statistika_korsat(talabalar):
     print("Eng yaxshi natija:", eng_yaxshi_ism, "-", eng_yaxshi_ortacha)
 
 
-talabalar = []
+talabalar = yuklash()
 while True:
     menyu_korsat()
     tanlov = input("Tanlovingizni kiriting (1-5): ")
     if tanlov == "1":
         ism = input("Talabaning ismini yozing: ")
-        yangi_talaba = {"ism": ism, "ball": []}
-        talabalar.append(yangi_talaba)
-        print(ism, "muvaffaqiyatli qo`shildi!")
+
+        mavjud = False
+        for talaba in talabalar:
+            if talaba["ism"] == ism:
+                mavjud = True
+
+        if mavjud:
+            print("Bu ism allaqachon mavjud!")
+        else:
+            yangi_talaba = {"ism": ism, "ball": []}
+            talabalar.append(yangi_talaba)
+            print(ism, "muvaffaqiyatli qo'shildi!")
     elif tanlov == "2":
         ball_qoshish(talabalar)
     elif tanlov == "3":
@@ -67,6 +107,7 @@ while True:
         statistika_korsat(talabalar)
 
     elif tanlov == "5":
+        saqlash(talabalar)
         print("Dastur yopildi")
         break
     else:
